@@ -37,7 +37,7 @@ export const Login = () => {
         
 
         try {
-            let endpoint = "http://localhost:5000/api/users/login"
+            let endpoint = `${process.env.REACT_APP_API_URL}/api/users/login`
             const res = await axios.post(endpoint, user)
             console.log(res, res.status)
             if (res.status == 200) {

@@ -34,7 +34,7 @@ export const Signup = () => {
         // })
 
         try {
-            let endpoint = "http://localhost:5000/api/users/register"
+            let endpoint = `${process.env.REACT_APP_API_URL}/api/users/register`
             const res = await axios.post(endpoint, user)
             console.log(res, res.status)
             if (res.status == 201) {
