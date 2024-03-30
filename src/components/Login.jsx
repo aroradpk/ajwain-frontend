@@ -38,7 +38,7 @@ export const Login = () => {
 
         try {
             console.log("process.env.REACT_APP_API_URL", process.env.REACT_APP_API_URL)
-            let endpoint = `${process.env.REACT_APP_API_URL}/api/users/login`
+            let endpoint = `https://ajwain.onrender.com/api/users/login`
             const res = await axios.post(endpoint, user)
             console.log(res, res.status)
             if (res.status == 200) {

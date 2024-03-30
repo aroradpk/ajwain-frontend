@@ -34,7 +34,7 @@ export const Signup = () => {
         // })
 
         try {
-            let endpoint = `${process.env.REACT_APP_API_URL}/api/users/register`
+            let endpoint = `https://ajwain.onrender.com/api/users/register`
             const res = await axios.post(endpoint, user)
             console.log(res, res.status)
             if (res.status == 201) {
